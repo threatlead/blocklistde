@@ -66,3 +66,8 @@ class BlocklistDe:
     @classmethod
     def bruteforcelogin(cls, ):
         return [(ip, 'bruteforcelogin') for ip in cls.get_ip_list('bruteforcelogin.txt')]
+
+    @classmethod
+    def get_all(cls, ):
+        return cls.ssh() + cls.mail() + cls.apache() + cls.imap() + cls.ftp() + cls.sip()\
+               + cls.bots() + cls.strongips() + cls.ircbot() + cls.ircbot()
